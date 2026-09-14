@@ -1,0 +1,176 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #ffd9e8 0%, #ffe4f0 100%);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.container {
+    width: 100%;
+    max-width: 500px;
+}
+
+.header {
+    text-align: center;
+    margin-bottom: 40px;
+    position: relative;
+}
+
+.accent-line {
+    height: 4px;
+    background: linear-gradient(90deg, #ffb700 0%, #ffa500 100%);
+    margin: 15px 0;
+    border-radius: 2px;
+}
+
+.accent-line.top {
+    width: 70%;
+    margin-left: auto;
+    margin-right: 0;
+}
+
+.accent-line.bottom {
+    width: 70%;
+    margin-left: 0;
+    margin-right: auto;
+}
+
+h1 {
+    font-size: 48px;
+    font-style: italic;
+    font-weight: 900;
+    background: linear-gradient(90deg, #ff006e 0%, #d700ff 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    letter-spacing: 2px;
+}
+
+.card-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card {
+    background: white;
+    border-radius: 20px;
+    padding: 40px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    min-width: 300px;
+}
+
+.bear {
+    font-size: 60px;
+    margin-bottom: 20px;
+}
+
+.question {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 30px;
+    font-weight: 500;
+}
+
+.button-container {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.btn {
+    padding: 12px 30px;
+    border: none;
+    border-radius: 25px;
+    font-size: 18px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    min-width: 120px;
+}
+
+.yes-btn {
+    background: linear-gradient(135deg, #ff006e 0%, #ff1493 100%);
+    color: white;
+    box-shadow: 0 4px 15px rgba(255, 0, 110, 0.4);
+}
+
+.yes-btn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 20px rgba(255, 0, 110, 0.6);
+}
+
+.yes-btn:active {
+    transform: scale(0.98);
+}
+
+.no-btn {
+    background: #e0e0e0;
+    color: #999;
+    cursor: not-allowed;
+}
+
+.no-btn:hover {
+    background: #e0e0e0;
+}
+
+/* Celebration animation */
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.celebrating .bear {
+    animation: bounce 0.5s infinite, spin 1s infinite;
+}
+
+.message {
+    margin-top: 20px;
+    font-size: 20px;
+    color: #ff006e;
+    font-weight: bold;
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 36px;
+    }
+
+    .card {
+        padding: 30px 20px;
+        min-width: auto;
+    }
+
+    .question {
+        font-size: 20px;
+    }
+
+    .btn {
+        padding: 10px 20px;
+        font-size: 16px;
+    }
+}
